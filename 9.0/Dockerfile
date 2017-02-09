@@ -11,6 +11,11 @@ COPY docker-entrypoint.sh /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-ENV NGX_ODOO_HOST=odoo
+ENV NGX_ODOO_HOST=odoo.loc
+ENV NGX_BOTS_HOST=bots.loc
+
+ENV NGX_ODOO_SERVICE=odoo
+ENV NGX_BOTS_SERVICE=bots
 
 CMD ["nginx", "-g", "daemon off;"]
+
